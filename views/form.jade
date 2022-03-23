@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Enter a new message 
+  form(action="/new", method="POST") 
+    p 
+      | User: 
+      input(type="text", name="messageUser", value="")
+      | message:
+      input(type="text", name="messageText", value="")
+    input(type="submit", value="Submit")
